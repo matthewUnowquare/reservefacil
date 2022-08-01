@@ -1,37 +1,23 @@
-const jwt = require('jsonwebtoken');
-const asyncHandler = require('express-async-handler');
-const User = require('../models/userModel');
+const jwt = require("jsonwebtoken");
 
-const protect = asyncHandler(async (req, res, next) => {
-  let token;
-
-  if (
-    req.headers.authorization &&
-    req.headers.authorization.startsWith('Bearer')
-  ) {
-    try {
-      //Get token from the HEADER
-      token = req.headers.authorization.split(' ')[1];
-      //Verify token
-      const decoded = jwt.verify(token, process.env.JWT_SECRET);
-      //Get user from the token
-      const user = await User.findById(decoded.id).select('-password');
-
-      next();
-    } catch (error) {
-      console.log(error);
-      res.status(401).json({
-        success: false,
-        error: 'Not authorized'
-      });
-    }
+const verifyToken = (req, res, next) => {
+  const token = req.headers["token"];
+  if (!token)
+    return res
+      .status(401)
+      .json({ success: false, message: "Unauthorized user" });
+  try {
+    const decoded = jwt.verify(token, process.env.secret);
+    //some more logic in order to get more data like: user, role, permissions, session data
+    if (decoded.hasOwnProperty("user")) next();
+  } catch (error) {
+    res.status(400).json({ success: false, message: "Invalid token" });
   }
-  if (!token) {
-    res.status(401).json({
-      success: false,
-      error: 'Not authorized, no token'
-    });
-  }
-});
+};
 
-module.exports = { protect };
+const verifyRole = (req, res, next) => {
+  return;
+};
+
+module.exports = { verifyToken, verifyRole };
+
