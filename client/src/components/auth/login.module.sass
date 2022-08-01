@@ -1,0 +1,8 @@
+@use '../../utils/' as *
+@import '../../utils/_variables'
+
+.form
+    background-color: $background-color,
+    height: 100vh,
+    @include mobile
+        background-color: red,
