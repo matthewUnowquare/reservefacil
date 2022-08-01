@@ -20,3 +20,4 @@ const verifyRole = (req, res, next) => {
 };
 
 module.exports = { verifyToken, verifyRole };
+
