@@ -77,8 +77,8 @@
         "quoteProps": "as-needed",
         "semi": true,
         "tabWidth": 2,
-        "trailingComma": "es5",
-        "useTabs": false,
+        "trailingComma": "null",
+        "useTabs": true,
         "bracketSameLine": false
       }
     ]
