@@ -1,5 +1,10 @@
-import React from 'react';
+import React from "react";
+import style from "./login.module.sass";
 
-export default function Login() {
-  return <div>Login</div>;
+export function Login() {
+  return (
+    <form className={style.form}>
+      <input type="text" />
+    </form>
+  );
 }

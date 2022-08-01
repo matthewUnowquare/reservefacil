@@ -69,7 +69,7 @@
       "error",
       {
         "bracketSpacing": true,
-        "singleQuote": true,
+        "singleQuote": false,
         "arrowParens": "avoid",
         "endOfLine": "lf",
         "htmlWhitespaceSensitivity": "ignore",
