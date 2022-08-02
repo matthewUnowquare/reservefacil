@@ -1,8 +1,22 @@
 @use '../../utils/' as *
 @import '../../utils/_variables'
 
+.grid
+    display: flex,
+    flex-direction: column,
+    justify-content: center
+
+.container
+    @extend .grid
+    height: 90vh,
+    width: 100%,
+    align-items: center
+
 .form
+    @extend .grid,
+    width: 30%,
     background-color: $background-color,
-    height: 100vh,
-    @include mobile
-        background-color: red,
+
+    input
+        margin: 10rem
+    
