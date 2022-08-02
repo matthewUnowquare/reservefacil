@@ -1,21 +1,17 @@
 import "./App.css";
+import { Routes, Route, Link } from "react-router-dom";
+import { Login } from "./components/auth/Login";
 import Home from "./components/Home/Home";
+import { Layout } from "./components/Layout/Layout";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Home />
-      </header>
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </Layout>
   );
 }
 
