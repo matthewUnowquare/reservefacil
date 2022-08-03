@@ -69,7 +69,7 @@
       "error",
       {
         "bracketSpacing": true,
-        "singleQuote": false,
+        "singleQuote": true,
         "arrowParens": "avoid",
         "endOfLine": "lf",
         "htmlWhitespaceSensitivity": "ignore",
@@ -77,9 +77,9 @@
         "quoteProps": "as-needed",
         "semi": true,
         "tabWidth": 2,
-        "trailingComma": "null",
+        "trailingComma": "none",
         "useTabs": true,
-        "bracketSameLine": false
+        "bracketSameLine": true
       }
     ]
   },
