@@ -4,8 +4,10 @@ const { protect, verifyToken } = require("../../middleware/authMiddleware");
 
 const router = express.Router();
 
-router.post("/", authController.register);
-router.post("/login", authController.login);
-router.get("/me", protect, authController.getMe);
+module.exports = (app) => {
+  router.route('/').post(authController.register);
+  router.route('/login').post(authController.login);
+  router.route('/me').get(protect, authController.getMe);
 
-module.exports = router;
+  app.use('/api/v1/users', router);
+};
