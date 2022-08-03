@@ -1,11 +1,11 @@
 import React from 'react';
-import style from './home.module.sass';
+import style from './about.module.sass';
 
-export default function Home() {
+export default function About() {
   return (
     <div className={style.container}>
       <form className={style.form}>
-        <h1>Home</h1>
+        <h1>About</h1>
       </form>
     </div>
   );

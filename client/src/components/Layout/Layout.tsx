@@ -1,7 +1,7 @@
 import React from "react";
 import { Footer } from "./Footer";
 import { Mainbar } from "./Mainbar";
-import styles from "./layout.module.sass";
+import styles from "../Layout/Layout.module.sass";
 
 type Props = {
   children: JSX.Element;
