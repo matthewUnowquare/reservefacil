@@ -19,5 +19,10 @@ const verifyRole = (req, res, next) => {
   return;
 };
 
-module.exports = { verifyToken, verifyRole };
+const protect = (req, res, next) => {
+  next();
+};
 
+
+
+module.exports = { verifyToken, verifyRole, protect };
