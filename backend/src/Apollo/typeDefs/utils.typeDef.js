@@ -7,10 +7,15 @@ type SuccessResponse {
     code: Int!
   }
 
-  union Data = Auth | Error
+  union Data = Auth | Error | Test
+
+  type Test {
+    name: String
+  }
 
   type Error {
     message: String!
-  }`;
+  } 
+  `;
 
     module.exports = {typeDef};
