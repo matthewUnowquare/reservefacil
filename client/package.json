@@ -4,6 +4,11 @@
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.6.9",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.10.0",
+    "@mui/styled-engine-sc": "^5.10.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -33,6 +38,7 @@
     "react-i18next": "^11.18.3",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
+    "styled-components": "^5.3.5",
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
   },
@@ -43,22 +49,6 @@
     "eject": "react-scripts eject",
     "lint:src": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
     "lintfix": "eslint --fix \"{src,test}/**/*.{js,jsx,ts,tsx}\""
-  },
-  "lint-staged": {
-    "\"{src,test}/**/*.{js,jsx,ts,tsx}\"": [
-      "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\" --fix",
-      "git add"
-    ],
-    ".": [
-      "eslint . --fix",
-      "git add"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [

@@ -28,4 +28,4 @@ HotelSchema.query.getActives = async function() {
     return this.where({status: 'ACTIVE'}); 
 }
 
-module.exports = mongoose.model('Hotel', HotelSchema);
+module.exports = mongoose.model('Venue', HotelSchema);

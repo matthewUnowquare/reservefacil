@@ -4,7 +4,7 @@ import { Mainbar } from "./Mainbar";
 import styles from "../Layout/Layout.module.sass";
 
 type Props = {
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
 };
 
 export function Layout({ children }: Props) {
